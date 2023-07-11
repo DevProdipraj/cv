@@ -1,0 +1,852 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        /* adding font  */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+        /* common code start  */
+        *{
+            padding: 0;
+            margin: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            color: #000;
+            font-family: 'Roboto', sans-serif;
+        }
+        h2, h3, h4, h5, h6, p{
+            color: #666666;
+            font-family: 'Roboto', sans-serif;
+        }
+        html{
+            font-size: 62.0%;
+        }
+        body{
+            scroll-behavior: smooth;
+        }
+
+    /* common code ends  */
+
+        .icons img{
+            background-color: #4d4c4d;
+            display: block;
+        }
+        .my-skill ul li {
+            color: #4d4c4d;
+            font-size: 5rem;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 4rem;
+        }
+        .header::before{
+            content: "";
+            height: 17rem;
+            width: 0.5rem;
+            background-color: #4d4c4d;
+            position: absolute;
+            top: 0;
+            left: 70rem;
+
+        }
+
+        .logo-design::before,
+        .profile-info::before,
+        .reference::before,
+        .language::before{
+            content: "";
+            height: 2rem;
+            width: 2rem;
+            color: #4d4c4d;
+            border: 2px solid #4d4c4d;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -1rem;
+            left: -2rem;
+          
+        }
+
+        .logo-design::after,
+        .profile-info::after,
+        .reference::after,
+        .language::after{
+            content: "";
+            height: 2rem;
+            width: 2rem;
+            color: #4d4c4d;
+            border: 2px solid #4d4c4d;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -1rem;
+            right: -2rem;
+          
+        }
+
+/* responsib design start from here  */
+
+        @media (max-width:1920px){
+            
+            .left-side{
+                padding-left: 2rem !important;
+            }
+            .right-side {
+                padding-left: 3.5rem !important;
+            }
+            .profile-info p{
+                width: 100rem !important;
+            }
+            .reference::after,
+            .profile-info::after{
+                bottom: -1rem;
+                right: -1.5rem;
+            }
+            .skill-dosc p{
+                width: 90rem !important;
+            }
+            .logo-design{
+                width: 95rem !important;
+            }
+            .logo-design::after{
+                bottom: -1rem;
+                right: -1.5rem;
+            }
+            .referance{
+                margin-right: 5rem !important;
+                padding: 4rem 0 rem !important;
+            }
+            .reference{
+                width: 95rem !important;
+            }
+            .reference::after{
+                bottom: -1rem;
+                right: -1.5rem;
+            }
+            .referance h3{
+                padding: 1rem 0rem !important;
+                margin-top: .5rem !important;
+                font-size: 3.1rem !important;
+            }
+            .referance h4{
+                font-size: 2.5rem !important;
+            }
+            .interests ul li{
+                padding-right: 1rem !important;
+                margin-right: 0rem !important;
+            }
+            .icons{
+                margin-left: 8rem !important;
+
+            }
+            .header::before {
+                left: 71.5rem;
+            }
+        }
+        @media (max-width:1700px){
+            html{
+                font-size: 45.0% !important;
+            }
+            .contact-info h2{
+                font-size: 3.5rem !important;
+            }
+            .contact-info p{
+                font-size: 3.5rem !important;
+            }
+            .header::before {
+                left: 93rem;
+            }
+            .icons {
+                margin-left: 7rem !important;
+            }
+            .header-right-side h1{
+                font-size: 15rem !important;
+                line-height: 17rem !important;
+            }
+            .left-side{
+                padding-right: 26rem !important;
+            }
+ 
+        }
+        @media (max-width:1370px){
+            .icons {
+                margin-left: 3rem !important;
+            }
+            .header::before {
+                left: 89.5rem !important;
+            }
+            .profile-info p {
+            width: 93rem !important;
+            }
+            .profile-info::after {
+            bottom: -1rem;
+            right: 0.5rem;
+            }
+            .skill-dosc p {
+            width: 81rem !important;
+            }
+            .logo-design {
+            width: 90rem !important;
+            }
+            .logo-design::after {
+            bottom: -1rem;
+            right: -2.5rem;
+            }
+            .reference {
+            width: 90rem !important;
+            }
+            .reference::after {
+            bottom: -1rem;
+            right: -2.5rem;
+            }
+            .interests ul li{
+                font-size: 3.5rem !important;
+            }
+        }
+        @media (max-width:1280px){
+            html{
+                font-size: 35% !important;
+            }
+            .icons{
+                margin-left: 0rem !important;
+            }
+            .contact-info{
+                padding-left: 0rem !important;
+                width: 95rem !important;
+                padding-right: 3rem !important;
+            }
+            .contact-info p{
+                width: 517px !important;
+            }
+            .header::before {
+                left: 99.5rem;
+            }
+            .phone-icon{
+                padding: 15px 10px 15px 10px!important;
+                border-radius: 5px;
+            }
+            .email-icon{
+                padding: 18px 9px 18px 9px !important;
+                border-radius: 5px;
+            }
+            .location-icon{
+                padding: 15px 14px 15px 14px !important;
+                border-radius: 5px;
+            }
+            .contact-info h2{
+                margin-bottom: 3rem !important;
+            }
+            
+        }
+        @media (max-width:991px){
+
+            /* header design start  */
+            .header{
+                flex-direction: column;
+                padding-top: 1.5rem !important;
+                 
+            }
+            .header-info{
+                flex-direction: column;
+                
+            }
+            .contact-info{
+                text-align: center !important;
+                padding-left: 0 !important;
+            }
+            .contact-info h2{
+                margin-bottom: .7rem !important;
+                font-size: 2rem !important;
+            }
+            .contact-info p{
+                width: 100% !important;
+                font-size: 2rem !important;
+                
+            }
+            .header::before{
+                display: none;
+            }
+            .icons{
+                display: none;
+            }
+
+            .header-right-side{
+                margin-left: 0rem !important;
+                text-align: center !important;
+               
+            }
+            .header-right-side h1{
+                font-size: 7rem !important;
+                line-height: 9rem !important;
+            }
+            .header-right-side h2{
+                font-size: 3rem !important;
+                margin-top: 0 !important;
+            }
+            /* header design ends  */
+
+            /* body section design start  */
+            .cv-body{
+                margin-top: .5rem !important;
+                flex-direction: column !important;
+            }
+            .left-side{
+                border-right: none !important;
+                padding-left: 3rem !important;
+            }
+            .my-skill h1 {
+                padding-top: 1rem !important;
+                text-align: center;
+            }
+            .my-skill h2 {
+                margin-top: 1rem !important;
+            }
+            .my-skill ul li{
+                font-size: 3rem;
+                margin-top: 2rem;
+            }
+            .parsonal h2{
+                margin-top: 3rem !important;
+                padding-bottom: 1rem !important;
+            }
+            .parsonal h3{
+                font-size: 3rem !important;
+                margin-top: 1rem !important;
+                padding-left: 1rem !important;
+            }
+            .parsonal-icons{
+                margin-top: 1rem !important;
+                margin-left: 2rem !important;
+            }
+            .heading-1{
+                padding-right:1rem !important ;
+            }
+            .heading-2{
+                padding-right: 5rem !important;
+            }
+            .heading-3{
+                padding-right: 2.5rem !important;
+            }
+            .language{
+                padding-bottom: 3rem !important;
+                border-bottom: none !important;
+            }
+            .language::after,
+            .language::before{
+                display: none !important;
+            }
+            .language h2{
+                margin-top: 3rem !important;
+            }
+
+            .language h3{
+                font-size: 3rem !important;
+                margin-top: 1rem !important;
+                padding-left: 1rem !important;
+            }
+            .language-icons{
+                margin-top: 1rem !important;
+                margin-left: 4rem !important;
+            }
+            .heading-4{
+                padding-right: 3rem !important;
+            }
+            .heading-5{
+                padding-right: 2rem !important;
+            }
+            .education h1{
+                text-align: center;
+            }
+            .degrees{
+                display: flex;
+                justify-content: space-between;
+            }
+            .degree1 h2,h3{
+                font-size: 2rem !important;
+                margin: 0rem !important;
+            }
+            .degree2 h2,h3{
+                font-size: 2rem !important;
+            }
+            .degrees-docs{
+                margin-top: 1rem !important;
+                margin-bottom: 0rem !important;
+            }
+            .degrees-docs p{
+                font-size: 1.75rem !important;
+                padding-left: 1rem !important;
+                width: 40rem !important;
+            }
+            .right-side {
+                padding-left: 3rem !important;
+            }
+            .profile-info h2{
+                font-size: 5.667rem !important;
+                margin-top: 4rem !important;
+                margin-bottom: 1.5rem !important;
+                text-align:center ;
+            }
+            .profile-info p{
+                font-size: 2.75rem !important;
+                border-bottom: none !important;
+                padding-bottom: 2.5rem !important;
+            }
+            .profile-info::after,
+            .profile-info::before
+            {
+                display: none;
+            }
+            .experience h1{
+                padding: 2rem !important;
+                text-align: center !important;
+            }
+            .skill-1 h2,
+            .skill-2 h2,
+            .skill-3 h2{
+                font-size: 3rem !important;
+            }
+            .skill-dosc p{
+                font-size: 2.7rem !important;
+            }
+            .skill-dosc img{
+                margin-left: 0rem !important;
+            }
+            .logo-design{
+                border-bottom: none !important;
+            }
+            .logo-design::after,
+            .logo-design::before{
+                display: none !important;
+            }
+            .reference h2{
+               padding: 2rem !important;
+               text-align: center !important;
+            }
+           
+            .referance h2{
+                font-size: 4rem !important;
+                text-align: left !important;
+                padding: 0rem !important;
+            }
+            .referance h3{
+                padding: 1rem 0rem !important;
+            }
+            .referance h4{
+                font-size: 1.7rem !important;
+            }
+            .reference{
+                border-bottom: none !important;
+            }
+            .reference::after,
+            .reference::before{
+                display: none !important;
+            }
+            .interests h1{
+                padding: 0rem !important;
+            }
+            .interests ul{
+                flex-direction: column !important;
+            }
+            /* body section design ends  */
+        }
+
+        @media (max-width:767px){
+            .degrees{
+                flex-direction: column !important;
+            }
+            .degrees h2{
+                margin-top: 2rem !important;
+            }
+        }  
+        
+        @media (max-width:575px){
+            .education h1{
+                font-size: 5rem !important;
+            }
+            .experience h1{
+                font-size: 5rem !important;
+            }
+            .references{
+                flex-direction: column !important;
+            }
+            .referance h2{
+                margin-top: 1rem !important;
+            }
+        }  
+        @media (max-width:360px) {
+            .header-right-side h1{
+                font-size: 4rem !important;
+            }
+            .left-side{
+                padding-left: .5rem !important;
+            }
+            .my-skill h1{
+                font-size: 4rem !important;
+                text-align: left !important;
+            }
+            .my-skill h2{
+               font-size: 3rem !important;
+            }
+            .my-skill ul li {
+                font-size: 2rem !important;
+                margin-top: 2rem !important;
+            }
+            .parsonal h2{
+                font-size: 3rem !important;
+            }
+            .parsonal h3 {
+                font-size: 2rem !important;
+                margin-top: 1.5rem !important;
+            }
+            .heading-1{
+                padding-right:0rem !important ;
+            }
+            .heading-2{
+                padding-right: 0rem !important;
+            }
+            .heading-3{
+                padding-right: 0rem !important;
+            }
+            .language h2{
+                font-size: 3rem !important;
+            }
+            .heading-4{
+                padding-right: 0rem !important;
+            }
+            .heading-5{
+                padding-right: 0rem !important;
+            }
+            .language h3 {
+                font-size: 2rem !important;
+                margin-top: 1.5rem !important;
+                padding-left: 1rem !important;
+            }
+            .education h1 {
+                font-size: 3rem !important;
+                text-align: left !important;
+                padding: 0rem !important;
+            }
+            .degrees-docs p {
+                width: 35rem !important;
+            }
+            .profile-info h2 {
+                font-size: 3.667rem !important;
+                margin-top: 3rem !important;
+                margin-bottom: 1.5rem !important;
+                text-align: left !important;
+            }
+            .right-side {
+                 padding-left: .5rem !important;
+            }
+            .experience h1 {
+                font-size: 3rem !important;
+            }
+            .skill-dosc img{
+                margin-right: 0.5rem;
+            }
+            .skill-dosc p {
+                font-size: 1.7rem !important;
+            }
+            .reference h2 {
+                padding: 0rem !important;
+                text-align: center !important;
+                font-size: 4rem !important;
+            }
+            .references h2{
+                font-size: 2rem !important;
+                text-align: left !important;
+                margin-top: 2rem !important;
+            }
+            .referance h3{
+                font-size: 1.5rem !important;
+            }
+            .referance h4{
+                font-size: 1rem !important;
+            }
+            .interests h1{
+                font-size: 2.5rem !important;
+                margin-top: 1.5rem !important;
+            }
+            .interests ul li{
+                font-size: 1.5rem !important;
+                margin-left: 1.5rem !important;
+            }
+            .references{
+                padding-bottom: 1rem !important;
+            }
+        } 
+       
+    </style>
+</head>
+<body>
+    <!-- cv header html start from here  -->
+    <header>
+        <div style="max-width: 2030px; margin: 0 auto;" class="header-wrapper">
+            <div class="header" style="display: flex; padding-top: 20rem; position: relative;">
+                <div class="header-left-side">
+                    <div class="header-info" style="display: flex;">
+                        <div class="contact-info" style="text-align: right; padding-left: 4rem;">
+                            <h2 style="font-size: 4.167rem; font-family: 'Roboto', sans-serif; font-weight: 400; margin-bottom: 7rem;">+12 - 3357 9988 2566</h2>
+
+                            <h2 style="font-size: 4.167rem; font-family: 'Roboto', sans-serif; font-weight: 400;  margin-bottom: 7rem;">katie_willson@gmail.com</h2>
+        
+                            <p style="font-size: 4.167rem; font-family: 'Roboto', sans-serif; font-weight: 400; width: 567px;">
+                                45 Central Park City 122 Floors
+                                New York, United State
+                            </p>
+                        </div>
+                        <div style="margin-left: 6rem;" class="icons">
+                            <a href="#">
+                                <img class="phone-icon" style="padding: 28px 10px 28px 10px;" src="./imgs/1.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="email-icon" style="padding: 28px 9px 28px 9px; margin: 12px 0px;" src="./imgs/2.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="location-icon" style="padding: 28px 14px 28px 14px;"src="./imgs/3.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right-side" style="margin-left: 8.5rem;">
+                    <h1 style="font-size: 187.5px; line-height: 52px; line-height: 176px; ">
+                        KATHIE
+                        WILLSON
+                    </h1>
+                    <h2 style="font-size: 4.583rem; font-weight: 500; margin-top: 3rem;">LEAD GRAPHIC DESIGNER</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- cv header html ends from here  -->
+
+    <!-- cv body html start from here -->
+    <div class="container" style="background-color: #cccccc;">
+        <div class="cv-body-wrapper" style=" max-width: 2030px; margin: 0 auto; ">
+            <div class="cv-body" style="margin-top: 12rem; display: flex;   border-top: 5px solid #333333;">
+              <div class="left-side" style="border-right: 5px solid #000; padding-right: 10rem;">
+                    <div class="my-skill">
+                        <h1 style="font-size: 6.666rem; padding-top: 13.5rem; font-weight: 700;">MY SKILLS</h1>
+                        <h2 style="font-size: 5rem; font-weight: 500; margin-top: 8.5rem;">Specialities.</h2>
+                        <ul style="margin-left: 4rem;">
+                            <li>Website Design</li>
+                            <li> App Development</li>
+                            <li>Graphic Design</li>
+                            <li>Branding</li> 
+                            <li>Logo Design</li> 
+                        </ul>
+                    </div>
+                    <div class="parsonal">
+                        <h2 style="font-size: 5rem ; font-weight: 500; color: #000; margin-top: 6rem;">Personal.</h2>
+                        <div style="border-left: 5px solid #000;  ">
+                            <div style="display: flex;">
+                                    <div>
+                                        <h3 style="font-size: 5rem ; font-weight: 400; color: #4d4c4d; margin-top: 5rem; padding-left: 6rem;">Leadership
+                                        </h3>
+                                    </div>
+                                    <div class="parsonal-icons" style="margin-top: 6.5rem; margin-left: 7.5rem;">
+                                        <img src="./imgs/4.png" alt="">
+                                        <img src="./imgs/4.png" alt="">
+                                        <img src="./imgs/4.png" alt="">
+                                        <img src="./imgs/4.png" alt="">
+                                        <img src="./imgs/5.png" alt="">
+                                    </div>
+                            </div>
+                            <div style="display: flex;">
+                                <div>
+                                    <h3 class="heading-1" style="font-size: 5rem ; font-weight: 400; color: #4d4c4d; margin-top: 5rem; padding-left: 6rem;">Teamwork
+                                </div>
+                                <div class="parsonal-icons" style="margin-top: 6.5rem; margin-left: 9rem;">
+                                    <img src="./imgs/4.png" alt="">
+                                    <img src="./imgs/4.png" alt="">
+                                    <img src="./imgs/4.png" alt="">
+                                    <img src="./imgs/5.png" alt="">
+                                    <img src="./imgs/5.png" alt="">
+                                </div>
+                            </div>
+                            <div style="display: flex;">
+                                <div>
+                                    <h3 class="heading-2" style="font-size: 5rem ; font-weight: 400; color: #4d4c4d; margin-top: 5rem; padding-left: 6rem;">Loyality </h3>
+                                </div>
+                                <div    class="parsonal-icons" style="margin-top: 6.5rem; margin-left: 15.5rem;">
+                                    <img src="./imgs/4.png" alt="">
+                                    <img src="./imgs/4.png" alt="">
+                                    <img src="./imgs/4.png" alt="">
+                                    <img src="./imgs/4.png" alt="">
+                                    <img src="./imgs/5.png" alt="">
+                                </div>
+                            </div>
+                            <div style="display: flex;">
+                                <div>
+                                    <h3 class="heading-3" style="font-size: 5rem ; font-weight: 400; color: #4d4c4d; margin-top: 5rem; padding-left: 6rem;">Creativity
+                            
+                                    </h3>
+                                </div>
+                                <div   class="parsonal-icons" style="margin-top: 6.5rem; margin-left: 11.5rem;">
+                                    <img src="./imgs/4.png" alt="">
+                                    <img src="./imgs/4.png" alt="">
+                                    <img src="./imgs/4.png" alt="">
+                                    <img src="./imgs/5.png" alt="">
+                                    <img src="./imgs/5.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  <div style="border-bottom: 2px solid #4d4c4d; padding-bottom: 10rem; position: relative;" class="language">
+                    <h2 style="font-size: 50px; font-weight: 400; color: #000; margin-top: 7rem;">Language
+                    </h2>
+                    <div style="border-left: 5px solid #000;  ">
+                       <div style="display: flex;">
+                           <div>
+                            <h3 class="heading-4" style=" font-size: 5rem ; font-weight: 400; color: #4d4c4d; margin-top: 5rem ; padding-left: 6rem;">English</h3>
+                           </div>
+                            <div class="language-icons" style="margin-top: 6.5rem; margin-left: 16.5rem;">
+                                <img src="./imgs/4.png" alt="">
+                                <img src="./imgs/4.png" alt="">
+                                <img src="./imgs/4.png" alt="">
+                                <img src="./imgs/4.png" alt="">
+                                <img src="./imgs/5.png" alt="">
+                            </div>
+                       </div>
+                       <div style="display: flex;">
+                           <div>
+                            <h3 class="heading-5" style=" font-size: 5rem ; font-weight: 400; color: #4d4c4d; margin-top: 5rem ; padding-left: 6rem;">Spanish</h3>
+                           </div>
+                            <div class="language-icons"  style="margin-top: 6.5rem; margin-left: 14.5rem;">
+                                <img src="./imgs/4.png" alt="">
+                                <img src="./imgs/4.png" alt="">
+                                <img src="./imgs/4.png" alt="">
+                                <img src="./imgs/4.png" alt="">
+                                <img src="./imgs/5.png" alt="">
+                            </div>
+                       </div>
+                       <div style="display: flex;">
+                           <div>
+                            <h3  style=" font-size: 5rem ; font-weight: 400; color: #4d4c4d; margin-top: 5rem ; padding-left: 6rem;">Indonesia</h3>
+                           </div>
+                            <div class="language-icons"  style="margin-top: 6.5rem; margin-left: 10.5rem;">
+                                <img src="./imgs/4.png" alt="">
+                                <img src="./imgs/4.png" alt="">
+                                <img src="./imgs/5.png" alt="">
+                                <img src="./imgs/5.png" alt="">
+                                <img src="./imgs/5.png" alt="">
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="education">
+                    <h1 style="font-size: 6.666rem; color: #000; font-weight: 700; padding: 5rem 0rem; ">MY EDUCATION</h1>
+                    <div class="degrees">
+                        <div class="degree1">
+                            <h2 style="font-size: 5rem; font-weight: 500; color: #4d4c4d;">Bachelors of Degree.</h2>
+                            <h3 style="font-size: 4.167rem; margin-top: 3.5rem;  color: #6c6a69;">University Name  /  2015 - 2019</h3>
+                            <div class="degrees-docs" style="border-left: 5px solid #000; margin-top: 5rem; margin-bottom: 7.5rem;">
+                                <p style="font-size: 3.75rem; color: #4d4c4d; padding-left: 6rem; width: 59rem;">
+                                    Lorem ipsum dolor sit amet edil consectetur adipiscing elitsed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="degree2">
+                            <h2 style="font-size: 5rem; font-weight: 500; color: #4d4c4d;">Master of Degree..</h2>
+                            <h3 style="font-size: 4.167rem; margin-top: 3.5rem;  color: #6c6a69;">University Name  /  2015 - 2019</h3>
+                            <div  class="degrees-docs" style="border-left: 5px solid #000; margin-top: 5rem; margin-bottom: 7.5rem;">
+                                <p style="font-size: 3.75rem; color: #4d4c4d; padding-left: 6rem; width: 59rem;">
+                                    Lorem ipsum dolor sit amet edil consectetur adipiscing elitsed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="right-side " style="padding-left: 11.5rem;">
+                  <div class="profile-info" style="position: relative;">
+                      <h2 style="font-size: 6.667rem; color: #000; font-weight: 700; margin-top: 13rem; margin-bottom: 8.5rem;">PROFILE INFO</h2>
+                      <p style="font-size: 3.75rem; font-weight: 400; color: #4d4c4d; border-bottom: 2px solid #4d4c4d; padding-bottom: 8.5rem;" >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elitsed doing ist the eiusmod tempor incididunt ut labore et dolore magna aliqua delmentors
+                        eduardo garcia delmonte adipiscing garamon elsamire etitude belsin roi
+                        slomerto masara et diam contrero beluci santos merejin talos.
+                      </p>
+                  </div>
+                  <div class="experience">
+                      <h1 style="font-size: 6.667rem; color: #000; font-weight: 700; padding: 9rem 0rem;">WORK EXPERIENCE</h1>
+                      <div class="skill-1">
+                          <h2 style="font-size: 5rem; font-weight: 500; color: #000;">Head Graphic Designer.</h2>
+                          <h3 style="font-size: 4.167rem; font-weight: 400; color: #4d4c4d; padding-bottom: 3.5rem; margin-top: 2rem;">Company Name  /  2015 - 2019</h3>
+                            <div class="skill-dosc" style="display: flex;">
+                                <div>
+                                    <img style="margin:3rem;" src="./imgs/6.png" alt="">
+                                </div>
+                                <div>
+                                    <p style="font-size: 3.77rem; font-weight: 400; color: #4d4c4d; padding-bottom: 6rem;">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elitsed doing is eiusmod tempor incididunt ut labore et dolore magna aliqua delm.
+                                      </p>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="skill-2"> 
+                          <h2 style="font-size: 5rem; font-weight: 500; color: #000;">UI / UX Designer.</h2>
+                          <h3 style="font-size: 4.167rem; font-weight: 400; color: #4d4c4d; padding-bottom: 3.5rem; margin-top: 2rem;">Company Name  /  2015 - 2019</h3>
+                         <div class="skill-dosc" style="display: flex;">
+                             <div >
+                                 <img style="margin:3rem;" src="./imgs/6.png" alt="">
+                             </div>
+                             <div>
+                                <p style="font-size: 3.77rem; font-weight: 400; color: #4d4c4d; padding-bottom: 6rem;">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elitsed doing is eiusmod tempor incididunt ut labore et dolore magna aliqua delm.
+                                  </p>
+                             </div>
+                         </div>
+                      </div>
+                      <div class="logo-design skill-3" style="border-bottom: 2px solid #4d4c4d; position: relative;">
+                          <h2 style="font-size: 5rem; font-weight: 500; color: #000;">Logo Designer.</h2>
+                          <h3 style="font-size: 4.167rem; font-weight: 400; color: #4d4c4d; padding-bottom: 3.5rem; margin-top: 2rem;">Company Name  /  2015 - 2019</h3>
+                            <div class="skill-dosc" style="display: flex;">
+                                <div>
+                                    <img style="margin:3rem;" src="./imgs/6.png" alt="">
+                                </div>
+                                <div>
+                                    <p style="font-size: 3.77rem; font-weight: 400; color: #4d4c4d; padding-bottom: 6rem;">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elitsed doing is eiusmod tempor incididunt ut labore et dolore magna aliqua delm.
+                                      </p>
+                                </div>
+                            </div>
+                      </div>
+                  </div>
+                  <div class="reference" style="border-bottom: 2px solid #4d4c4d;  position: relative;">
+                      <h2 style="font-size: 6.667rem; color: #000; font-weight: 700; padding: 9rem 0rem;">REFERENCE</h2>
+                     <div class="references" style="display: flex; padding-bottom: 9rem;">
+                        <div class="referance" style="margin-right: 15rem;">
+                            <h2 style="font-size: 5rem; font-weight: 400; color: #000;">Luis Hernandes.</h2>
+                            <h3 style="font-size: 4.157rem; font-weight: 400; color: #4d4c4d; padding: 4rem 0rem; margin-top: 2rem;">CEO Company Name</h3>
+                            <h4 style="font-size: 3.75rem; font-weight: 400; color: #4d4c4d;">P:  +12 3379 0570</h4>
+                            <h4 style="font-size: 3.75rem; font-weight: 400; color: #4d4c4d;">E:  luis_hernandes@gmail.com</h4>
+                        </div>
+                        <div  class="referance" >
+                            <h2 style="font-size: 5rem; font-weight: 400; color: #000;">Fernando Couto.</h2>
+                            <h3 style="font-size: 4.157rem; font-weight: 400; color: #4d4c4d; padding: 4rem 0rem; margin-top: 2rem;">Owner Company Name</h3>
+                            <h4 style="font-size: 3.75rem; font-weight: 400; color: #4d4c4d;">P:  +12 3379 0570</h4>
+                            <h4 style="font-size: 3.75rem; font-weight: 400; color: #4d4c4d;">E:  fernando_couto@gmail.com</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="interests">
+                      <h1 style="font-size: 6.667rem; font-weight: 7000; color: #000; padding: 9rem 0rem;">INTERESTS</h1>
+                      <ul style="display: flex;">
+                          <li style="font-size: 4.167rem; font-weight: 400; color: #4d4c4d; margin-left: 4.5rem; padding-right:4.5rem ;">Games</li>
+                          <li style="font-size: 4.167rem; font-weight: 400; color: #4d4c4d; margin-left: 4.5rem; padding-right:4.5rem ;">Dance</li>
+                          <li style="font-size: 4.167rem; font-weight: 400; color: #4d4c4d; margin-left: 4.5rem; padding-right:4.5rem ;">Travel</li>
+                          <li style="font-size: 4.167rem; font-weight: 400; color: #4d4c4d; margin-left: 4.5rem; padding-right:4.5rem ;">Movie</li>
+                          <li style="font-size: 4.167rem; font-weight: 400; color: #4d4c4d; margin-left: 4.5rem; padding-right:4.5rem ;">Music</li>
+                          <li style="font-size: 4.167rem; font-weight: 400; color: #4d4c4d; margin-left: 4.5rem; padding-right:4.5rem ;">Biking</li>                                                 
+                      </ul>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- cv body html start from here  -->
+</body>
+</html>
